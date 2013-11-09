@@ -1,0 +1,20 @@
+<div class="site-footer">
+
+  <ul class="site-footer-links right">
+    <li><%= link_to "About", about_path %></li>
+    <li><%= link_to "Blog", '#' %></li>
+  </ul>
+
+  <%= link_to root_path do %>
+    <span class="mega-octicon octicon-mark-github">
+      <i class="glyphicon glyphicon-globe"></i>
+    </span>
+  <% end %>
+
+  <ul class="site-footer-links">
+    <li>© <%= Time.now.year %> TEDx Unipi</li>
+    <li><%= link_to "Facebook", "https://www.facebook.com/TEDxUniversityofPiraeus", :target => '_blank' %></li>
+    <li><%= link_to "Twitter", "https://twitter.com/TEDxUniPi", :target => '_blank' %></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
