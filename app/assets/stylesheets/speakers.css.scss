@@ -1,0 +1,56 @@
+.recipe {
+  float: left;
+  margin: 10px 0;
+  height: 300px;
+  width: 352px;
+  background: rgba(255,255,255,1);
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.1);
+  img {
+    margin: 5px 5px 5px;
+    width: 340px;
+    height: 240px;
+    border: 0;
+  }
+}
+
+.recipe:nth-of-type(1n+0) {
+  margin-left: 20px;
+}
+
+.title {
+  padding: 5px 5px;
+  display: inline-block;
+  float: left;
+}
+
+.meta {
+  margin-right: 5px;
+  margin-top: 10px;
+  float: right;
+}
+
+.subject {
+  color: #c0392b;
+  font-size: 11px;
+  float: left;
+  font-weight: bold;
+}
+
+.speaker-profile-pic {
+  text-align: center;
+  img {
+    height: 150px;
+    width: 150px;
+    border: 5px solid rgba(255,255,255,1);
+    border-radius: 10px;
+  }
+}
+
+.speaker-profile-bio {
+  text-align: center;
+}
+
+.speaker-profile-social {
+
+}

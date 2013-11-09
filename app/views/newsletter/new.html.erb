@@ -1,0 +1,92 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <h1>Subscribe to our Awesome News</h1>
+    </div>
+  </div>
+  <form method="post" action="https://www.mail.phoenix-prime.gr/form.php?form=30" id="frmSS30" onsubmit="return CheckForm30(this);">
+  <div class="panel-body">
+
+    <style type="text/css">
+      .required {
+        color: red;
+      }
+
+    </style>
+
+      <table border="0" cellpadding="2" class="myForm">
+        <tr>
+          <td><span class="required">*</span>&nbsp;First Name:</td>
+          <td><input type="text" class="form-control" name="CustomFields[2]" id="CustomFields_2_30" value="" size='50'></td>
+        </tr><tr>
+        <td><span class="required">*</span>&nbsp;Last Name:</td>
+        <td><input type="text" class="form-control" name="CustomFields[3]" id="CustomFields_3_30" value="" size='50'></td>
+      </tr><tr>
+        <td><span class="required">*</span>&nbsp;
+          Specialty:</td>
+        <td>
+          <select name="CustomFields[45]" class="form-control" id="CustomFields_45_30">
+          <option value="">- Please Select -</option>
+          <option value="Φοιτητής">Student</option>
+          <option value="Καθηγητής">Teacher</option>
+          <option value="Συνεργάτης">Partner</option>
+          <option value="Άλλο">Other</option></select>
+        </td>
+      </tr><tr>
+        <td><span class="required">*</span>&nbsp;
+          Your Email Address:</td>
+        <td><input type="text" class="form-control" name="email" value="" /></td>
+      </tr><input type="hidden" name="format" value="h" />
+      </table>
+
+
+
+  </div>
+  <div class="panel-footer">
+    <input type="submit" value="Subscribe" class="btn btn-primary" />
+  </div>
+  </form>
+</div>
+
+
+
+<script type="text/javascript">
+  // <![CDATA[
+
+  function CheckMultiple30(frm, name) {
+    for (var i=0; i < frm.length; i++)
+    {
+      fldObj = frm.elements[i];
+      fldId = fldObj.id;
+      if (fldId) {
+        var fieldnamecheck=fldObj.id.indexOf(name);
+        if (fieldnamecheck != -1) {
+          if (fldObj.checked) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+  function CheckForm30(f) {
+    var email_re = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
+    if (!email_re.test(f.email.value)) {
+      alert("Please enter your email address.");
+      f.email.focus();
+      return false;
+    }
+
+    var fname = "CustomFields_45_30";
+    var fld = document.getElementById(fname);
+    if (fld.selectedIndex == -1 || fld.selectedIndex == 0) {
+      alert("Please choose an option for field Specialty");
+      fld.focus();
+      return false;
+    }
+
+    return true;
+  }
+
+  // ]]>
+</script>

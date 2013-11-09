@@ -22,5 +22,8 @@ module Tedxunipi
     config.i18n.default_locale = :en
 
     config.assets.initialize_on_precompile = false
+
+    # Required for Fonts
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
