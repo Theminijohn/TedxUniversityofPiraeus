@@ -21,6 +21,7 @@
           Applications <span class="badge">2014</span>
         <% end %>
       </li>
+      <li><%= link_to "Buy Tickets", '#', class: "buy-tickets" %></li>
       <% if user_signed_in? %>
         <li><%= link_to "Account Settings", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>

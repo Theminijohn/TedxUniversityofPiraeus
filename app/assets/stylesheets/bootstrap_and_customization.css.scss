@@ -21,5 +21,13 @@ $jumbotron-bg:                    white;
 }
 
 .tedred {
-  color: #c0392b;;
+  color: #c0392b;
+}
+
+.buy-tickets {
+  color: #c0392b!important;
+  line-height: 20px!important;
+  &:hover {
+    color: #777777!important;
+  }
 }

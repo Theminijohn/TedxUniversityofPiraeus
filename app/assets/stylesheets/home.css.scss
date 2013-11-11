@@ -1,0 +1,25 @@
+.column-33 {
+  margin-left: 25px;
+  float: left;
+  min-height: 25px;
+}
+
+.boxed {
+  background: #FFF;
+  color: #555;
+  margin-top: 0;
+  border: solid 1px #ddd;
+  padding: 25px 25px 0 25px;
+  margin-bottom: 25px;
+  width: 290px;
+  img {
+    margin: -40px auto 0;
+    height: 60px !important;
+    width: auto !important;
+    z-index: 10;
+    padding: 4px 0 5px 0;
+    display: block;
+
+  }
+}
+
