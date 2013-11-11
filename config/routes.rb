@@ -1,6 +1,8 @@
 Tedxunipi::Application.routes.draw do
 
-  devise_for :users
+  # Devise Settings
+  devise_for :users, controllers: { registrations: 'registrations' }
+
   get "pages/home"
   get "pages/about"
 
@@ -14,9 +16,6 @@ Tedxunipi::Application.routes.draw do
   get 'newsletter' => 'newsletter#new'
   get "newsletter/success"
   get "newsletter/error"
-
-  # Applications
-  get 'applications' => 'pages#applications'
 
   # Schedule
   get 'schedule' => 'pages#schedule'

@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def applications
-  end
-
   def schedule
   end
 

@@ -17,14 +17,23 @@
       <li><%= link_to "Schedule", schedule_path %></li>
       <li><%= link_to "Speakers", speakers_path %></li>
       <li>
-        <%= link_to applications_path do %>
-          Applications <span class="badge">2014</span>
+        <%= link_to '#', class: "buy-tickets" do %>
+          Buy Tickets <span class="badge">2014</span>
         <% end %>
       </li>
-      <li><%= link_to "Buy Tickets", '#', class: "buy-tickets" %></li>
       <% if user_signed_in? %>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-no-turbolink>
+            Giannakis <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" data-no-turbolink>
+            <li><%= link_to "Speakers Lounge", '#' %></li>
+            <li><%= link_to "My Profile", '#' %></li>
+            <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </li>
       <% else %>
         <li><%= link_to "Sign in", new_user_session_path%></li>
       <% end %>
