@@ -10,7 +10,11 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
+    if current_user.has_role? :admin
     @applications = Application.all
+    else
+    @applications = current_user.application
+    end
   end
 
   # GET /applications/1

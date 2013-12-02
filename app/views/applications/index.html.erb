@@ -1,30 +1,9 @@
 <h1>Listing applications</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @applications.each do |application| %>
-      <tr>
-        <td><%= application.first_name %></td>
-        <td><%= application.last_name %></td>
-        <td><%= application.phone %></td>
-        <td><%= link_to 'Show', application %></td>
-        <td><%= link_to 'Edit', edit_application_path(application) %></td>
-        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% if current_user.has_role? :admin %>
+    <%= render @applications %>
+<% else %>
+User application
+<% end %>
 
 <br>
 

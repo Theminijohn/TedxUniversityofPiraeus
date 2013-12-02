@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
                          uid:auth.uid,
                          email:auth.info.email,
                          password:Devise.friendly_token[0,20])
-      user.just_signed_up = true
       user
     end
   end
