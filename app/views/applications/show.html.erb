@@ -1,0 +1,17 @@
+<p>
+  <strong>First name:</strong>
+  <%= @application.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @application.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @application.phone %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

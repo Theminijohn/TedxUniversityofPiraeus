@@ -1,0 +1,67 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Submit an Application</h1>
+  </div>
+
+  <div class="panel-body">
+    <%= form_for(@application) do |f| %>
+      <% if @application.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+          <ul>
+            <% @application.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+
+      <hr>
+
+      <div class="form-group">
+        <%= f.label :concept, "Tell us what is the general concept of your proposed TEDx talk" %><br>
+        <%= f.text_area :concept, class: "form-control", :rows => 4,
+                        placeholder: "(mention 3-5 points about your idea, and why it's worth spreading.)" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :tell_us, "Tell us why you think you can be a TED speaker" %><br>
+        <%= f.text_area :tell_us, class: "form-control", :rows => 4 %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :cvq, "CVQuick Description" %><br>
+        <%= f.text_area :cvq, class: "form-control", :rows => 4 %>
+      </div>
+
+
+    </div>
+
+      <div class="panel-footer">
+        <div class="form-group">
+          <%= f.submit "Submit your Application", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+    </div>
+    </div>

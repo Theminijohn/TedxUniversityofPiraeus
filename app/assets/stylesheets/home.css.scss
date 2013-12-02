@@ -21,3 +21,31 @@
     display: block;
   }
 }
+
+
+.f_home_unit {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.14286;
+  color: inherit;
+  background-image: url("http://i.imgur.com/71WuXnA.png"); }
+.f_home_unit h1 {
+  line-height: 1;
+  color: #ECF0F1;
+  text-shadow: 0 1px 10px #272822; }
+.f_home_unit p {
+  line-height: 1.4; }
+.container .f_home_unit {
+  border-radius: 6px; }
+@media screen and (min-width: 768px) {
+  .f_home_unit {
+    padding-top: 48px;
+    padding-bottom: 48px; }
+  .container .f_home_unit{
+    padding-left: 60px;
+    padding-right: 60px; }
+  .f_home_unit h1 {
+    font-size: 63px; }
+}

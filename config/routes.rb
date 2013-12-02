@@ -1,7 +1,12 @@
 Tedxunipi::Application.routes.draw do
 
+  resources :applications
+
+  get "users/show"
   # Devise Settings
-  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",
+                                      :registrations => "registrations"},
+             :path => '', :path_names => {:sign_in => 'signin'}
 
   get "pages/home"
   get "pages/about"
@@ -25,6 +30,15 @@ Tedxunipi::Application.routes.draw do
 
   # Speakers
   get 'speakers' => 'pages#speakers'
+
+  # User Page
+  get 'users/:id' => 'users#show', as: :user
+
+  # Talks
+  get 'talks' => 'pages#talks'
+
+  # Submit an Application
+  get 'submit' => 'pages#submit'
 
 
 end

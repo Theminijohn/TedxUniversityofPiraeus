@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Submit an Application</h1>
+  </div>
+
+  <div class="panel-body">
+    <%= form_for(@application) do |f| %>
+      <% if @application.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+          <ul>
+            <% @application.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone %>
+      </div>
+
+  </div>
+
+  <div class="panel-footer">
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -13,4 +13,10 @@ class PagesController < ApplicationController
 
   def speakers
   end
+
+  def talks
+  end
+
+  def submit
+  end
 end

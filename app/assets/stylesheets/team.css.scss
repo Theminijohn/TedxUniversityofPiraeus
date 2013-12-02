@@ -1,0 +1,142 @@
+/* Widget Styles*/
+.widget {
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  width: 240px;
+  height: 100%;
+  
+  .content {
+    width: 240px;
+    height: 264px;
+    position: relative;
+    overflow: hidden;
+    
+    .button {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 62px;
+      border-radius: 0px 5px 0px 0px;
+      overflow: hidden;
+    
+      
+      .icon {
+        position: absolute;
+        right: 10px;
+        top: -5px;
+        color: white;
+        font-size: 35px;
+        text-shadow: 0 1px 4px rgba(0,0,0,.45);
+      }
+      .btn-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 60px 62px 0;
+        border-color: transparent #c0392b transparent transparent;
+        z-index: -1;
+        box-shadow: -1px 1px 1px rgba(0,0,0,.2), inset 0 1px rgba(255,255,255,.18);
+      }
+    }
+    .pic {
+      margin: 0 auto;
+      position: relative;
+      top: 26px;
+      width: 140px;
+      
+      .down {
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,.25);
+        box-shadow: 0 0 1px rgba(0,0,0,.5), 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,.5);
+        
+        .up {
+          margin: 5px auto;
+          width: 130px;
+          height: 130px;
+          border-radius: 65px;
+          background-color: #000;
+          box-shadow: 0 0 1px rgba(0,0,0,.2), 0 1px 4px rgba(0,0,0,.65), inset 0 1px 3px rgba(255,255,255,.3);
+          
+          .container {
+            width: 130px;
+            height: 130px;
+            border-radius: 65px;
+            background: rgba(0,0,0,0) url('http://i1344.photobucket.com/albums/p652/azedoeag/profile-pic_zps0a3d8a71.jpg');
+            background-position: -19px 223px;
+            box-shadow: inset 0px -5px 10px 0px rgba(0,0,0,.3), inset 0 5px 10px rgba(255,255,255,.3);
+            
+          }
+        }
+      } 
+    }
+    .info {
+      font-family: 'Arimo', sans-serif;
+      text-align: center;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,.45);
+      position: relative;
+      top: 50px;
+      
+      .name {
+        font-size: 24px;
+      }
+      .description {
+        font-size: 13px;
+      }
+    }
+    
+    [class*='bg-'] {
+      position: absolute;
+      z-index: -1;
+      background: rgba(53,51,55,.5);
+    }
+    
+    .bg-1 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 68px;
+      border-radius: 5px 0 0 5px;
+    }
+    .bg-2 {
+      top: 71px;
+      bottom: 0;
+      right: 0;
+      width: 68px;
+      border-radius: 0 0 5px 0;
+    }
+    .bg-3 {
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 71px 0 0 68px;
+      border-color: transparent transparent transparent rgba(53,51,55,.5);
+      background: none;
+        
+      &:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 71px;
+        top: -71px;
+        left: 0px;
+        transform: skewx(44deg);
+        transform-origin: bottom left;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        z-index: 99;
+      }
+    }
+  }
+}

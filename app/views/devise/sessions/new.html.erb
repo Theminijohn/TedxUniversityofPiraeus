@@ -26,6 +26,8 @@
 
       <div class="form-group">
         <%= f.submit "Sign in", class: "btn btn-primary" %>
+        <%= link_to "Login via Facebook", user_omniauth_authorize_path(:facebook),
+                    class: "btn btn-primary"%>
       </div>
     <% end %>
   </div>

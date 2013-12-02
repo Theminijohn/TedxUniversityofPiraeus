@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0' # Always declare a ruby version
+ruby "2.0.0"
 
 
 gem 'rails', '4.0.1'
@@ -11,6 +11,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'devise', '~> 3.1.1'
+gem 'cancan'
+gem 'role_model'
+
+# Facebook Authentication
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :doc do
   gem 'sdoc', require: false
