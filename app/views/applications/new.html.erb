@@ -4,7 +4,7 @@
   </div>
 
   <div class="panel-body">
-    <%= form_for(@application) do |f| %>
+    <%= form_for @application, html: { multipart: true } do |f| %>
       <% if @application.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
@@ -16,6 +16,11 @@
           </ul>
         </div>
       <% end %>
+
+      <div class="form-group">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar, class: "form-control" %>
+      </div>
 
       <div class="form-group">
         <%= f.label :first_name %><br>
@@ -34,7 +39,7 @@
 
       <div class="form-group">
         <%= f.label :email %><br>
-        <%= f.text_field :email, class: "form-control" %>
+        <%= f.email_field :email, class: "form-control" %>
       </div>
 
       <hr>

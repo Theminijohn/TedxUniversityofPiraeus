@@ -19,4 +19,7 @@ class PagesController < ApplicationController
 
   def submit
   end
+
+  def youridea
+  end
 end

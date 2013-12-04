@@ -8,17 +8,19 @@ class Ability
     if user.has_role? :admin
       can :manage, :all
     else
-      # Normal User
-    end
-
-    # Speakers
-    if user.has_role? :speaker
       can :read, Application do |application|
         application.try(:user) == user
       end
       can :create, Application
       can :update, Application do |application|
         application.try(:user) == user
+      end
+      can :read, Idea do |idea|
+        idea.try(:user) == user
+      end
+      can :create, Idea
+      can :update, Idea do |idea|
+        idea.try(:user) == user
       end
     end
     #

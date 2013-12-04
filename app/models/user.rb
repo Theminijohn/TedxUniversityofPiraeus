@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true, :uniqueness => true
 
   has_one :application
+  has_one :idea
 
   # Role Model
   include RoleModel

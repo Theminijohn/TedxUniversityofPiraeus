@@ -14,6 +14,10 @@ gem 'devise', '~> 3.1.1'
 gem 'cancan'
 gem 'role_model'
 
+# Imageing
+gem 'paperclip', '~> 3.0'
+gem 'aws-sdk', '~> 1.20.0'
+
 # Facebook Authentication
 gem 'omniauth'
 gem 'omniauth-facebook'

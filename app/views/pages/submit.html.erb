@@ -10,7 +10,7 @@
       <i class="videoShadow img sp_azv72o sx_904d68"></i>
       <span class="pal videoBox">
         <div class="videoBlackout"></div>
-        <a class="videoLink" href="#" role="button">
+        <a class="videoLink" href="#myModal" data-toggle="modal" data-target="#myModal">
           <img class="videoPlaceholder img" src="https://fbstatic-a.akamaihd.net/rsrc.php/v1/yO/r/h7hcUgSpn28.jpg" alt="" width="720" height="405">
           <div class="watchVideoText">Watch the video</div>
           <i class="videoPlayButton img sp_azv72o sx_0455aa"></i>
@@ -20,7 +20,21 @@
   </div>
 </div>
 
-
+<div class="speaker_marketing_slogans" style="width: 750px">
+  <h2>
+    Το TEDx University of Piraeus φέτος, με θέμα "Time Voyager" έρχεται για
+    να αναδείξει ιδέες του παρελθόντος που γίνονται μεγάλα επιτεύγματα του
+    μέλλοντος, πως το παρελθόν μας διαγράφεται στο μέλλον μας και πως μπορούμε
+    να αξιοποιώντας το παρόν μας να είμαστε περήφανοι για τον αυριανό μας εαυτό.
+    Τεχνολογία, ιστορία και φιλοσοφία παντρεύονται καθημερινά μπροστά μας
+    δημιουργόντας τις νέες εξελίξεις.
+  </h2>
+  <h2>
+    Σχεδιάζεις κάτι για το μέλλον? Αναρωτιέσαι για το παρελθόν? Σε εκφράζει η
+    θεματολογία και θες να διαδόσεις και εσύ την ιδέα σου? 'Ισως φέτος να είναι
+    σειρά σου να ανέβεις στην σκηνή του TEDx και να μοιραστείς την εμπειρία σου.
+  </h2>
+</div>
 
 <div class="center">
   <%= link_to new_application_path, class: "btn btn-primary btn-lg" do %>
@@ -28,24 +42,46 @@
   <% end %>
 </div>
 
-
+<br>
 
 <div class="center spreadTheWord">
-
-  <img class="mbl img" src="https://fbstatic-a.akamaihd.net/rsrc.php/v2/yo/r/BfexZNy7x3i.png" alt="" width="250" height="81">
   <h3 class="pbm _50mo _3ma _6p _6s _6v _6x">Spread it</h3>
-
   <div class="phl">
     <h6 class="mtm _50t- _50ms inlineBlock _3m9 _6n _6t _59g" id="u_0_f" style="width: 603px;">
-      <span>Join the awesomeness and spread the Words. Know an awesome Speaker? Invite him for a Look.</span>
+      <span>Join the awesomeness and spread the Word. Know an awesome Speaker? Invite him for a Look.</span>
     </h6>
   </div>
 
-  <div class="fb-like" data-href="http://www.tedxuniversityofpiraeus.com/submit" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
 
-  <a href="https://twitter.com/share" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <div style="text-align: center;">
+    <input style="margin:0 auto; width:250px;" type="text"  class="form-control" onClick="this.select();" value="<%= request.original_url %>" >
+  </div>
+
+
+  <br>
+
+  <div class="fb-like" data-href="http://www.tedxuniversityofpiraeus.com/submit" width="200px" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
 
 </div>
 
 
+
+
+
+
+<!-- Speakers Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">What makes a great talk, great!</h4>
+      </div>
+      <div class="modal-body submitVideoiFrame">
+        <iframe width="100%" height="auto" src="//www.youtube.com/embed/hhbvUZOLTQY?theme=light" frameborder="0" allowfullscreen></iframe>      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

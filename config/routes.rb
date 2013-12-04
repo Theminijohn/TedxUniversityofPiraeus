@@ -1,5 +1,7 @@
 Tedxunipi::Application.routes.draw do
 
+  resources :ideas
+
   resources :applications
 
   get "users/show"
@@ -39,6 +41,8 @@ Tedxunipi::Application.routes.draw do
 
   # Submit an Application
   get 'submit' => 'pages#submit'
+
+  get 'youridea' => 'pages#youridea'
 
 
 end

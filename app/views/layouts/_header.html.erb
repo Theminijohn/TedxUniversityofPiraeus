@@ -17,8 +17,8 @@
       <li><%= link_to "Schedule", schedule_path %></li>
       <li><%= link_to "Speakers", speakers_path %></li>
       <li>
-        <%= link_to '#', class: "buy-tickets" do %>
-          Buy Tickets <span class="badge">2014</span>
+        <%= link_to 'http://www.eventbrite.com/e/i-change-we-change-tickets-9518364685', :target => "_blank" ,class: "buy-tickets" do %>
+          Get Tickets <span class="badge">9/12/2013</span>
         <% end %>
       </li>
       <li><%= link_to "Talks", talks_path %></li>
@@ -38,6 +38,18 @@
                 <li><%= link_to "Submit an Application", submit_path %></li>
                 <!--<li><%= link_to "Submit an Application", new_application_path %></li>-->
               <% end %>
+            <% end %>
+            <% if can? :create, Idea %>
+              <% if current_user.idea.present? %>
+                <li><%= link_to "My Idea ", current_user.idea %></li>
+              <% else %>
+                <li><%= link_to "Submit an Idea", youridea_path %></li>
+              <% end %>
+            <% end %>
+            <% if current_user.has_role? :admin %>
+              <li class="divider"></li>
+              <li><%= link_to "Applications", applications_path %></li>
+              <li><%= link_to "Ideas", ideas_path %></li>
             <% end %>
             <li class="divider"></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

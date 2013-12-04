@@ -13,7 +13,7 @@ class ApplicationsController < ApplicationController
     if current_user.has_role? :admin
     @applications = Application.all
     else
-    @applications = current_user.application
+    redirect_to root_path
     end
   end
 
@@ -80,7 +80,7 @@ class ApplicationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
       params.require(:application).permit(:first_name, :last_name, :phone, :speakers, :user_id, :email, :concept, :tell_us,
-                                          :cvq)
+                                          :cvq, :avatar)
     end
 
     def check_application_existence

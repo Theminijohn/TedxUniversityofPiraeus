@@ -26,7 +26,7 @@
   }
   .videoWrapper {
     display: block;
-    margin-bottom: 120px;
+    margin-bottom: 70px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -164,4 +164,32 @@ h6._50t- {
 ._6n {
   font-size: 23px;
   line-height: 120%;
+}
+
+.submitVideoiFrame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.speaker_marketing_slogans {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal !important;
+    text-rendering: optimizelegibility;
+    font-size: 18px;
+    line-height: 126%;
+    color: #999;
+  }
 }

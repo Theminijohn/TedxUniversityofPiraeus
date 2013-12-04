@@ -1,10 +1,2 @@
-<h1>Listing applications</h1>
-<% if current_user.has_role? :admin %>
-    <%= render @applications %>
-<% else %>
-User application
-<% end %>
+<%= render @applications %>
 
-<br>
-
-<%= link_to 'New Application', new_application_path %>
