@@ -79,10 +79,10 @@ class IdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:full_name, :email, :title, :body)
+      params.require(:idea).permit(:full_name, :email, :title, :body, :specs)
     end
 
     def check_idea_existence
-      redirect_to root_path, alert: "You already Submitted an Idea, but you can edit and add more Ideas to your existing form if you want" if current_user.idea
+      redirect_to current_user.idea, alert: "You already Submitted an Idea, but you can edit and add more Ideas to your existing form if you want" if current_user.idea
     end
 end

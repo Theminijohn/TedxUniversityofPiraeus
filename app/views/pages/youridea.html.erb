@@ -1,1 +1,31 @@
-<%= link_to "Submit your Idea", new_idea_path, class: "btn btn-primary btn-lg" %>
+<div class="submit_your_idea">
+  <h1>More of your Ideas</h1>
+  <h2>Hello bright and beautiful ideas.</h2>
+</div>
+
+
+<div class="center">
+  <%= link_to "Submit your Idea", new_idea_path, class: "btn btn-primary btn-lg" %>
+</div>
+
+
+<div class="center spreadTheWord">
+  <h3 class="pbm _50mo _3ma _6p _6s _6v _6x">Spread it</h3>
+  <div class="phl">
+    <h6 class="mtm _50t- _50ms inlineBlock _3m9 _6n _6t _59g" id="u_0_f" style="width: 603px;">
+      <span>Join the awesomeness and spread the Word.
+        Know an awesome Speaker? Invite him for a Look.</span>
+    </h6>
+  </div>
+
+
+  <div style="text-align: center;">
+    <input style="margin:0 auto; width:250px;" type="text"  class="form-control" onClick="this.select();" value="<%= request.original_url %>" >
+  </div>
+
+
+  <br>
+
+  <div class="fb-like" data-href="http://www.tedxuniversityofpiraeus.com/youridea" width="200px" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
+
+</div>

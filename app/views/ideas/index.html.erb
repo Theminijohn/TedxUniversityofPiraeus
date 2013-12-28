@@ -1,1 +1,23 @@
-<%= render @ideas %>
+<div class="row">
+
+  <div class="col-md-9">
+    <%= render @ideas %>
+  </div>
+
+  <div class="col-md-3">
+
+    <div class="applications_counter">
+      <p>
+        We Currently Have
+      </p>
+      <p>
+        <%= @ideas.count %>
+      </p>
+      <p>
+        proposed <%= "Idea".pluralize(@ideas.count) %>
+      </p>
+    </div>
+
+  </div>
+
+</div>

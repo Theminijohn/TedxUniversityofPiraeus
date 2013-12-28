@@ -1,0 +1,44 @@
+<div class="row">
+
+  <!-- Left Panel-->
+  <div class="col-md-3">
+
+    <div class="chart">
+      <div class="percentage circle easyPieChart" data-percent="<%= @applications.count %>" style="width: 140px; height: 140px; line-height: 140px;">
+        <span><%= @applications.count %></span>
+        <canvas width="140" height="140"></canvas>
+      </div>
+      <div class="label first_one">Applications</div>
+      <div class="label">Registered</div>
+    </div>
+
+  </div>
+
+<!-- Mid Panel-->
+  <div class="col-md-6">
+
+    <div class="teamLoungeUnit">
+      <h1><%= current_user.first_name %></h1>
+    </div>
+    <div class="under_tmu">
+      <h2>Welcome to our Dasboard</h2>
+    </div>
+
+  </div>
+
+  <!-- Right Panel-->
+  <div class="col-md-3">
+
+    <div class="chart">
+      <div class="percentage circle easyPieChart" data-percent="<%= @applications.count %>" style="width: 140px; height: 140px; line-height: 140px;">
+        <span><%= @ideas.count %></span>
+        <canvas width="140" height="140"></canvas>
+      </div>
+      <div class="label first_one">Ideas</div>  <br>
+      <div class="label">Submitted</div>
+    </div>
+
+  </div>
+
+
+</div>

@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   # declare the valid roles -- do not change the order if you add more
   # roles later, always append them at the end!
-  roles :admin, :moderator, :speaker, :sponsor, :guest
+  roles :admin, :moderator, :speaker, :sponsor, :guest, :team
 
   # Facebook oauth Settings
   def self.find_for_facebook_oauth(auth, signed_in_resource = nil)

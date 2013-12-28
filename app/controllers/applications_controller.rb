@@ -80,10 +80,10 @@ class ApplicationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
       params.require(:application).permit(:first_name, :last_name, :phone, :speakers, :user_id, :email, :concept, :tell_us,
-                                          :cvq, :avatar)
+                                          :cvq, :avatar, :fb_link, :twt_link, :lin_link)
     end
 
     def check_application_existence
-      redirect_to root_path, alert: "You already Submitted an Application" if current_user.application
+      redirect_to current_user.application, alert: "You already Submitted an Application" if current_user.application
     end
 end

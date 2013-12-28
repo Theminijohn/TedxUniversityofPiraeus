@@ -1,0 +1,72 @@
+.chart {
+  width: 100%;
+  height:250px;
+  margin-right:2.5em;
+  border-radius: 6px;
+  background:#e63a3a;
+  text-align: center;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  float:left;
+}
+
+.chart.gray { background:#666666; }
+.chart.blue { background:#15a1c6; }
+.chart.green { background:#7ca312; }
+.circle {
+  margin:20px auto 0px auto;
+  font-size:24px;
+  font-family: 'Lato', sans-serif;
+  font-weight:400;
+  color:#fff;
+  border-radius: 100%;
+}
+
+.label {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 200;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.easyPieChart {
+  position: relative;
+  text-align: center;
+}
+
+.easyPieChart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// TeamLoungeUnit
+.teamLoungeUnit {
+  padding: 15px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.14286;
+  color: inherit;
+  background-image: url("http://i.imgur.com/cT6omf1.png");
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  h1 {
+    line-height: 1;
+    color: #ECF0F1;
+    text-shadow: 0 1px 10px #272822;
+    float: le
+    ;
+  }
+}
+
+.under_tmu {
+  float: right;
+  h2 {
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 13px;
+  }
+}

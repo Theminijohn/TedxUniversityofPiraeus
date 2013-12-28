@@ -23,6 +23,10 @@ class Ability
         idea.try(:user) == user
       end
     end
+
+    if user.has_role? :team
+      #
+    end
     #
     # The first argument to `can` is the action you are giving the user 
     # permission to do.

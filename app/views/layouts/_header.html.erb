@@ -14,13 +14,11 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Schedule", schedule_path %></li>
-      <li><%= link_to "Speakers", speakers_path %></li>
-      <li>
-        <%= link_to 'http://www.eventbrite.com/e/i-change-we-change-tickets-9518364685', :target => "_blank" ,class: "buy-tickets" do %>
-          Get Tickets <span class="badge">9/12/2013</span>
-        <% end %>
-      </li>
+      <!--<li>-->
+        <!--<%= link_to '#{http://www.eventbrite.com/e/i-change-we-change-tickets-9518364685}', :target => "_blank" ,class: "buy-tickets" do %>-->
+          <!--Get Tickets <span class="badge">#</span>-->
+        <!--<% end %>-->
+      <!--</li>-->
       <li><%= link_to "Talks", talks_path %></li>
       <% if user_signed_in? %>
         <li class="dropdown">
@@ -28,7 +26,10 @@
             <%= current_user.first_name %> <b class="caret"></b>
           </a>
           <ul class="dropdown-menu" data-no-turbolink>
-            <li><%= link_to "My Profile", current_user %></li>
+            <!--<li><%= link_to "My Profile", current_user %></li>-->
+            <% if current_user.has_role? :team %>
+              <li><%= link_to "Team Lounge", thelounge_path %></li>
+            <% end %>
             <li><%= link_to "Account Settings", edit_user_registration_path %></li>
             <% if can? :create, Application %>
               <li class="divider"></li>

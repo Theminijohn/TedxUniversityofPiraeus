@@ -1,2 +1,23 @@
-<%= render @applications %>
+<div class="row">
 
+  <div class="col-md-9">
+    <%= render @applications %>
+  </div>
+
+  <div class="col-md-3">
+
+    <div class="ideas_counter">
+      <p>
+        We Currently Have
+      </p>
+      <p>
+      <%= @applications.count %>
+      </p>
+      <p>
+      Applications Registered
+      </p>
+    </div>
+
+  </div>
+
+</div>

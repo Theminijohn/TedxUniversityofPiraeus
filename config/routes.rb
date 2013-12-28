@@ -6,8 +6,7 @@ Tedxunipi::Application.routes.draw do
 
   get "users/show"
   # Devise Settings
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",
-                                      :registrations => "registrations"},
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
              :path => '', :path_names => {:sign_in => 'signin'}
 
   get "pages/home"
@@ -44,5 +43,6 @@ Tedxunipi::Application.routes.draw do
 
   get 'youridea' => 'pages#youridea'
 
+  get 'thelounge' => 'pages#thelounge'
 
 end

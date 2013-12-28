@@ -79,7 +79,15 @@ Tedxunipi::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Action Mailer Settings
-  config.action_mailer.default_url_options = { :host => 'http://tedxunipi.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'tedxuniversityofpiraeus.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "mail.tedxuniversityofpiraeus.com",
+      :port                 => 25,
+      :user_name            => 'info@tedxuniversityofpiraeus.com',
+      :password             => ENV['INFO_MAIL_PASSWORD'],
+      :authentication       => 'plain',
+      :enable_starttls_auto => false  }
 
   # Amazon S3 Keys
   config.paperclip_defaults = {

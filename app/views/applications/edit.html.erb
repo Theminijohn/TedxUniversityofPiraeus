@@ -18,6 +18,11 @@
       <% end %>
 
       <div class="form-group">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :first_name %><br>
         <%= f.text_field :first_name, class: "form-control" %>
       </div>
@@ -37,21 +42,36 @@
         <%= f.text_field :email, class: "form-control" %>
       </div>
 
+      <div class="form-group">
+        <%= f.label :fb_link, "Facebook Link" %><br>
+        <%= f.text_field :fb_link, class: "form-control", placeholder: "http://www.facebook.com/yourname" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :twt_link, "Twitter Link" %><br>
+        <%= f.text_field :twt_link, class: "form-control", placeholder: "http://www.twitter.com/yourname" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :lin_link, "Linked in Link" %><br>
+        <%= f.text_field :lin_link, class: "form-control", placeholder: "http://www.linkedin.com/in/yourname" %>
+      </div>
+
       <hr>
 
       <div class="form-group">
-        <%= f.label :concept, "Tell us what is the general concept of your proposed TEDx talk" %><br>
+        <%= f.label :concept, "Tell us what the general concept of your proposed TEDx talk is" %><br>
         <%= f.text_area :concept, class: "form-control", :rows => 4,
                         placeholder: "(mention 3-5 points about your idea, and why it's worth spreading.)" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :tell_us, "Tell us why you think you can be a TED speaker" %><br>
+        <%= f.label :tell_us, "Tell us why you think you can be a TEDx speaker" %><br>
         <%= f.text_area :tell_us, class: "form-control", :rows => 4 %>
       </div>
 
       <div class="form-group">
-        <%= f.label :cvq, "CVQuick Description" %><br>
+        <%= f.label :cvq, "CV Quick Description" %><br>
         <%= f.text_area :cvq, class: "form-control", :rows => 4 %>
       </div>
 

@@ -1,3 +1,187 @@
-// Place all the styles related to the ideas controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.ideas_counter {
+  text-align: center;
+  background-image: url("http://i.imgur.com/XvLDdyq.png");
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+  padding: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  p {
+    color: #ECF0F1;
+  }
+}
+
+
+
+// Idea Partial
+// Application Partials
+
+.idea_bar{
+  display: block;
+  width: 100%;
+  border-radius:3px;
+  float: left;
+}
+.idea_bar .profile{
+  border-radius:3px;
+  overflow:hidden;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  margin:15px 0;
+}
+.idea_bar .profile .picture{
+  background:#3a3d40;
+  display:inline-block;
+  margin-right:20px;
+  float:left;
+  position: relative;
+  z-index: 9;
+  overflow:hidden;
+}
+.idea_bar .profile .picture:after{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -40%;
+  left: 0;
+  width: 500%;
+  height: 400%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 200px rgba(255,255,255,.15);
+  -moz-box-shadow: 0 0 0 200px rgba(255,255,255,.15);
+  box-shadow: 0 0 0 200px rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.2);
+  transition: all .3s;
+}
+.idea_bar .profile .picture img{
+  //margin: 15px;
+  border-radius:3px;
+  width:50px;
+}
+.idea_bar .profile .description{
+  position: relative;
+  padding-top: 6px;
+}
+
+.description .view_link{
+  position:absolute;
+  right:15px;
+  top:15px;
+}
+
+.orange{
+  background:#c0392b;
+}
+.sh-orange{
+  box-shadow:5px 0 0 0 #c0392b;
+}
+.border-orange{
+  border:1px solid #c0392b;
+}
+.color-orange{
+  color:#c0392b !important;
+}
+.profile .description .name{
+  float: left;
+  padding:0;
+  margin:0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile .description .idea_title {
+  float: left;
+  padding: 1px 0 0 5px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #5f5f5f;
+}
+
+.profile .description .pretext{
+  font:12px;
+}
+
+.SocialHandle {
+  a {
+    font-size: 11px;
+    text-decoration: none;
+  }
+}
+
+// Idea Show Page
+.idea_show_body {
+  h1 {
+    font-size: 16px;
+  }
+}
+
+.idea_user_name {
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.idea_user_title {
+  font-weight: bold;
+}
+
+.idea_specs {
+  font-size: 15px;
+  float: right;
+  font-weight: bold;
+}
+
+.idea_user_email {}
+
+
+
+// Submit Idea Page
+.submit_your_idea {
+  text-align: center;
+  h1 {
+    font-size: 68px;
+    font-weight: normal !important;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  h2 {
+    color: #999;
+    font-size: 20px;
+    font-weight: normal !important;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

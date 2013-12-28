@@ -1,24 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
 
-<p>
-  <strong>Full name:</strong>
-  <%= @idea.full_name %>
-</p>
+    <div class="pull-left">
+      <div class="idea_user_name">
+        <%= @idea.full_name %>
+      </div>
+      <div class="idea_user_title">
+        <%= @idea.title %>
+      </div>
+    </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @idea.email %>
-</p>
+    <div class="pull-right">
 
-<p>
-  <strong>Title:</strong>
-  <%= @idea.title %>
-</p>
+      <div class="idea_specs">
+        <%= @idea.specs %>
+      </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @idea.body %>
-</p>
+      <div class="idea_user_email">
+        <a href="mailto:<%= @idea.email %>" class="btn btn-primary btn-xs">Email</a>
+      </div>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="panel-body">
+    <div class="idea_show_body">
+      <h1><%= @idea.body %></h1>
+    </div>
+  </div>
+
+  <div class="panel-footer">
+    <%= link_to 'Edit', edit_idea_path(@idea), class: "btn btn-primary" %>
+    <%= link_to 'Back', ideas_path, class: "btn btn-primary" %>
+  </div>
+</div>

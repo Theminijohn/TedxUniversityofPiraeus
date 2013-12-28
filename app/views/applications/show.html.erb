@@ -1,17 +1,57 @@
-<p>
-  <strong>First name:</strong>
-  <%= @application.first_name %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
 
-<p>
-  <strong>Last name:</strong>
-  <%= @application.last_name %>
-</p>
+    <div class="media">
+      <a class="pull-left application_user_image">
+        <%= image_tag @application.avatar.url(:application) %>
+      </a>
+      <div class="pull-right">
+        Phone: <b><%= @application.phone %></b>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><b><%= @application.first_name %> <%= @application.last_name %></b></h4>
+        <% if @application.fb_link.present? %>
+          <%= link_to "Facebook", @application.fb_link, :target => "_blank", class: "btn btn-primary btn-xs" %>
+        <% end %>
+        <% if @application.twt_link.present? %>
+          <%= link_to "Twitter", @application.twt_link, :target => "_blank", class: "btn btn-primary btn-xs" %>
+        <% end %>
+        <% if @application.lin_link.present? %>
+          <%= link_to "Linked in", @application.lin_link, :target => "_blank", class: "btn btn-primary btn-xs" %>
+        <% end %>
+        <br>
+        <%= @application.email %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @application.phone %>
-</p>
+  <div class="panel-body">
 
-<%= link_to 'Edit', edit_application_path(@application) %> |
-<%= link_to 'Back', applications_path %>
+
+
+    <div class="application_concept">
+      <h1>Tell us what the general concept of your proposed TEDx talk is</h1>
+      <%= @application.concept %>
+    </div>
+
+
+    <div class="application_tell_us">
+      <h1>Tell us why you think you can be a TEDx speaker</h1>
+      <%= @application.tell_us %>
+    </div>
+
+
+    <div class="application_cvq">
+      <h1>CV Quick Description</h1>
+      <%= @application.cvq %>
+    </div>
+
+
+
+  </div>
+
+  <div class="panel-footer">
+    <%= link_to 'Edit', edit_application_path(@application), class: "btn btn-primary" %>
+    <%= link_to 'Back', applications_path, class: "btn btn-primary" %>
+  </div>
+</div>
