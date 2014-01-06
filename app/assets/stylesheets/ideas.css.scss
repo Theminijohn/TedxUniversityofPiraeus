@@ -142,10 +142,13 @@
 .submit_your_idea {
   text-align: center;
   h1 {
-    font-size: 68px;
-    font-weight: normal !important;
+    font-size: 55px;
+    letter-spacing: -1px;
+    text-shadow: #fff 1px 2px;
+    text-align: center;
+    line-height: 120%;
     text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
   }
   h2 {
     color: #999;
