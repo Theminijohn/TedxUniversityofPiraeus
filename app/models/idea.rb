@@ -7,7 +7,7 @@ class Idea < ActiveRecord::Base
   validates :specs, :presence => true
   validates :body, :presence => true
 
-  TITLE = :Student, :Teacher, :Partner, :Other
-  SPECS = :Event, :Speaker, :Host, :Experience, :Other
+  TITLE = :Student, :Professor, :Partner, :Other
+  SPECS = :Speakers, :Host, :Entertainment, :Other
 
 end

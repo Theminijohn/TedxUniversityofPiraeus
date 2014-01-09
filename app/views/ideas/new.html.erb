@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1>More of your Ideas</h1>
+    <h1>Your ideas worth spreading</h1>
   </div>
 
   <div class="panel-body">
@@ -28,17 +28,17 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :title %><br>
+        <%= f.label :title, "I'm a:" %><br>
         <%= f.select :title, options_for_select(Idea::TITLE) %>
       </div>
 
       <div class="form-group">
-        <%= f.label :specs %><br>
+        <%= f.label :specs, "I have an idea for:" %><br>
         <%= f.select :specs, options_for_select(Idea::SPECS) %>
       </div>
 
       <div class="form-group">
-        <%= f.label :body %><br>
+        <%= f.label :body, "My Idea:" %><br>
         <%= f.text_area :body, class: "form-control", :rows => 4 %>
       </div>
 
