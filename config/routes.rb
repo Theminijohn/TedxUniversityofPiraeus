@@ -45,4 +45,6 @@ Tedxunipi::Application.routes.draw do
 
   get 'thelounge' => 'pages#thelounge'
 
+  get 'faq' => 'pages#faq'
+
 end

@@ -23,6 +23,9 @@ class PagesController < ApplicationController
   def youridea
   end
 
+  def faq
+  end
+
   def thelounge
     if current_user.has_role? :team
       @applications = Application.all
